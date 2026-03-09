@@ -88,7 +88,7 @@ search-summarization-agent/
 ### Step 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/search-summarization-agent.git
+git clone https://github.com/iyash1/search-summarization-agent.git
 cd search-summarization-agent
 ```
 

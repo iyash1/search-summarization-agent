@@ -1,0 +1,9 @@
+langchain 
+langgraph 
+langchain_openai 
+tavily-python 
+amadeus 
+python-dotenv 
+gradio 
+langchain_community 
+graphviz

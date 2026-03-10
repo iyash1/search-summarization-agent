@@ -17,7 +17,7 @@
 
 ## 🎯 Overview
 
-The **Search and Summarization Agent** is a sophisticated agentic AI application that helps users search the web and summarize topics. It leverages advanced language models and web search to provide comprehensive insights, concise summaries, sentiment analysis, and multilingual support.
+The **Search and Summarization Agent** is a sophisticated agentic AI application that helps users search the web, summarize topics, and perform calculations. It leverages advanced language models, web search, and arithmetic operations to provide comprehensive insights, concise summaries, sentiment analysis, multilingual support, and computational capabilities.
 
 ## ✨ Features
 
@@ -25,6 +25,7 @@ The **Search and Summarization Agent** is a sophisticated agentic AI application
 - 🌐 **Web Search Integration** - Real-time search for latest information and events
 - 🇪🇸 **Multi-language Translation** - Translate summaries to Spanish (for now)
 - 😊 **Sentiment Analysis** - Analyze content sentiment
+- 🧮 **Calculator Tool** - Perform arithmetic operations (add, subtract, multiply, divide, mod, power)
 - 🧠 **Agentic Workflow** - Advanced LangGraph-based agent architecture
 - 🎨 **Colored CLI** - Beautiful terminal interface with emojis
 
@@ -65,7 +66,8 @@ search-summarization-agent/
 │
 ├── 📂 tools/                       # External tool integrations
 │   ├── __init__.py
-│   └── tavily_search.py            # Web search via TavilySearch
+│   ├── tavily_search.py            # Web search via TavilySearch
+│   └── calculator_tool.py                # Calculator agent with LangGraph
 │
 └── 📂 utils/                       # Helper utilities
     ├── __init__.py
@@ -80,7 +82,7 @@ search-summarization-agent/
 | **data/** | Stores TypedDict models defining state structures and app constants |
 | **nodes/** | Individual processing nodes that perform specific tasks (summarize, translate, sentiment) |
 | **workflows/** | LangGraph StateGraph definitions that chain nodes together |
-| **tools/** | External integrations like web search API wrappers |
+| **tools/** | External integrations like web search API wrappers and calculator agent |
 | **utils/** | Helper functions for input validation, prompts, and sample data |
 
 ## 🚀 Installation
@@ -158,7 +160,8 @@ SELECT A WORKFLOW TO RUN:
 2. Summarize and Translate to Spanish
 3. Summarize and Analyze Sentiment
 4. Search web for latest information
-5. Exit
+5. Calculator tool
+6. Exit
 ```
 
 ### Example Workflow
@@ -214,6 +217,15 @@ offering zero emissions and improved efficiency with regenerative braking.
 - Searches the web using Tavily Search
 - Returns latest information and insights
 - Built with LangGraph agent architecture
+
+### Workflow 5: Calculator 🧮
+
+**File:** `tools/date_tool.py`
+
+- Performs arithmetic operations using AI agents
+- Supports operations: add, subtract, multiply, divide, mod, power
+- Input: Natural language expression (e.g., "add 5 and 3")
+- Returns calculated result via LangGraph calculator agent
 
 ## 🐛 Troubleshooting
 
@@ -286,5 +298,5 @@ MIT License - see LICENSE file for details.
 
 ---
 
-**Happy searching and summarizing! 🌍📊** Feel free to reach out with questions or suggestions! 💬
+**Happy searching, summarizing, and calculating! 🌍📊** Feel free to reach out with questions or suggestions! 💬
 

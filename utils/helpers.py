@@ -1,6 +1,4 @@
-import os
 from colorama import Fore, Style, init
-from dotenv import load_dotenv
 from utils.sample_prompts import sample_text
 
 init(autoreset=True)

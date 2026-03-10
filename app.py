@@ -51,6 +51,7 @@ from workflows.summarization import workflow_summarize
 from workflows.summary_and_translation import workflow_summarize_and_translate
 from workflows.summary_and_sentiment import workflow_summarize_and_analyze_sentiment
 from tools.tavily_search import search_graph_tool
+from tools.calculator_tool import calculator_tool
 
 # ------------------------------------
 # Start the application
@@ -73,12 +74,13 @@ if __name__ == "__main__":
                 2. Summarize and Translate to Spanish
                 3. Summarize and Analyze Sentiment
                 4. Search web for latest happenings
-                5. Exit
+                5. Calculator tool
+                6. Exit
                 {Style.RESET_ALL}   
                    """)
-            workflow_choice = input(f"{Fore.CYAN} ➡️ Enter the number of the workflow you want to run (1, 2, 3, 4, or 5 to exit): {Style.RESET_ALL}").strip()
-            if workflow_choice.strip() not in ["1", "2", "3", "4", "5"]:
-                print(f"{Fore.RED} ➡️ Invalid workflow choice. Please enter 1, 2, 3, 4, or 5. ❌ {Style.RESET_ALL}")
+            workflow_choice = input(f"{Fore.CYAN} ➡️ Enter the number of the workflow you want to run (1, 2, 3, 4, 5 or 6 to exit): {Style.RESET_ALL}").strip()
+            if workflow_choice.strip() not in ["1", "2", "3", "4", "5", "6"]:
+                print(f"{Fore.RED} ➡️ Invalid workflow choice. Please enter 1, 2, 3, 4, 5, or 6. ❌ {Style.RESET_ALL}")
                 continue
 
             match workflow_choice.strip():
@@ -91,6 +93,8 @@ if __name__ == "__main__":
                 case "4":
                     search_graph_tool(user_input())
                 case "5":
+                    calculator_tool(user_input())
+                case "6":
                     print(f"{Fore.RED} ➡️ Exiting the Search and Summarization Agent. Goodbye! 👋 {Style.RESET_ALL}")
                     break
 

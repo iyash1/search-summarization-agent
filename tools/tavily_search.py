@@ -1,6 +1,6 @@
 import os
 
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import BaseMessage, ToolMessage, HumanMessage, AIMessage, SystemMessage
 from langgraph.graph import StateGraph, END
@@ -18,7 +18,7 @@ from IPython.display import display, Image
 
 llm = ChatOpenAI(model = GPT_5_MINI, temperature = 0, streaming = True)
 
-tavily_search_tool = TavilySearchResults(max_results = 3)
+tavily_search_tool = TavilySearch(max_results = 3)
 
 # List of tools for this step
 tools_list_single = [tavily_search_tool]

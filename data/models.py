@@ -19,3 +19,7 @@ class AgentStateSentiment(TypedDict):
 
 class AgentSearchState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], operator.add]
+
+class CalculatorState(TypedDict):
+    expression: str
+    result: str
